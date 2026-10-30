@@ -155,5 +155,4 @@ Icons by [Lucide](https://lucide.dev/) ([ISC license](assets/icons/LICENSE)).
 Technology logos by [Simple Icons](https://simpleicons.org/)
 ([CC0 license](assets/technology/LICENSE)). Custom graphics use
 [Inter](https://rsms.me/inter/) ([OFL license](assets/technology/Inter-OFL.txt)).
-The header is AI-generated artwork;
-the five screenshots are from my hardware tests.
+The five screenshots are from my hardware tests.
