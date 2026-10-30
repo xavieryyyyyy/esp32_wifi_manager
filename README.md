@@ -60,11 +60,12 @@ assigned IP address in Serial Monitor at **115200 baud**.
 | Wrong password | The connection failed. The setup portal timed out and the board restarted. It then failed to reconnect with the saved details and reopened its setup network. |
 | Reset settings | I held BOOT for three seconds, then released it when prompted. The board erased its saved Wi-Fi settings, restarted, and reopened the setup network. |
 | Change the name | After changing `AP_NAME` and uploading, `BCA188-ESP32-XX-Test` appeared in my phone's Wi-Fi list. |
-| Different network | I selected `Lenovo Customer Care 1` through the setup page. The board connected and received `192.168.1.20`, without another code change or upload for the network switch. |
+| Different network / phone hotspot | I selected my realme 7 phone hotspot, `realme 7`, through the setup page. The ESP32 connected successfully and received `10.164.178.65`, without changing or uploading the code again. |
 
 The first successful connection was to `4L Rooftop` at `192.168.1.33`.
-The second network is verified; whether it was a phone hotspot is still
-to be confirmed. `XX` is a temporary placeholder for my assigned number.
+I also connected to `Lenovo Customer Care 1` at `192.168.1.20`, then
+confirmed the phone-hotspot test with `realme 7` at `10.164.178.65`.
+`XX` is a temporary placeholder for my assigned number.
 
 <a id="hardware-evidence"></a>
 
@@ -83,17 +84,29 @@ I opened the ESP32's setup page at `192.168.4.1`.
   <a href="images/setup-page.jpg"><img src="images/setup-page.jpg" width="260" alt="Phone displaying the WiFiManager setup page for BCA188-ESP32-XX at 192.168.4.1."></a>
 </p>
 
-### Successful connection in Serial Monitor
+### Successful phone-hotspot connection
 
-The ESP32 joined `Lenovo Customer Care 1` and received `192.168.1.20`.
-This address comes from the selected network; `192.168.4.1` is the setup page address.
+The ESP32 joined my realme 7 phone hotspot, named `realme 7`, and received
+`10.164.178.65`. Serial Monitor shows `Connect to new AP [SUCCESS]`,
+followed by `Connected!` and the assigned IP address.
+This address comes from the hotspot; `192.168.4.1` is the setup page address.
 
 <p align="left">
-  <a href="images/connected-ip.png"><img src="images/connected-ip.png" width="100%" alt="Serial Monitor reports a successful connection to Lenovo Customer Care 1 and IP 192.168.1.20."></a>
+  <a href="images/hotspot-connected.png"><img src="images/hotspot-connected.png" width="100%" alt="Serial Monitor shows the ESP32 connecting successfully to the realme 7 phone hotspot and receiving IP 10.164.178.65."></a>
 </p>
 
 Click a screenshot to view the original at full size.
 
+
+<details>
+<summary>Earlier connection to another Wi-Fi network</summary>
+
+Before testing the phone hotspot, I connected to `Lenovo Customer Care 1`.
+The ESP32 received `192.168.1.20`.
+
+![Serial Monitor shows a successful connection to Lenovo Customer Care 1 at 192.168.1.20.](images/connected-ip.png)
+
+</details>
 
 <details>
 <summary>Wrong password, timeout, and automatic restart</summary>
@@ -155,4 +168,4 @@ Icons by [Lucide](https://lucide.dev/) ([ISC license](assets/icons/LICENSE)).
 Technology logos by [Simple Icons](https://simpleicons.org/)
 ([CC0 license](assets/technology/LICENSE)). Custom graphics use
 [Inter](https://rsms.me/inter/) ([OFL license](assets/technology/Inter-OFL.txt)).
-The five screenshots are from my hardware tests.
+The six screenshots are from my hardware tests.
