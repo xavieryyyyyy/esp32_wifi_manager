@@ -3,11 +3,12 @@
 </p>
 
 <p align="left">
-  <a href="https://www.espressif.com/en/products/socs/esp32"><img src="assets/technology/esp32.svg" width="184" height="88" alt="ESP32. WROOM-32 board."></a>
-  <a href="https://www.arduino.cc/en/software/"><img src="assets/technology/arduino.svg" width="184" height="88" alt="Arduino IDE. Development tools."></a>
-  <img src="assets/technology/cpp.svg" width="184" height="88" alt="C++. Firmware language.">
-  <a href="https://github.com/tzapu/WiFiManager"><img src="assets/technology/wifimanager.svg" width="184" height="88" alt="WiFiManager. Setup portal by tzapu."></a>
+<picture>
+  <source media="(max-width: 600px)" srcset="assets/technology/stack-mobile.svg">
+  <img src="assets/technology/stack.svg" width="100%" alt="ESP32 WROOM-32 board; Arduino IDE development tools; C++ firmware; WiFiManager setup portal by tzapu.">
+</picture>
 </p>
+
 
 <p align="left">
   <a href="#connection-flow">Connection flow</a> &nbsp; / &nbsp;
@@ -26,12 +27,19 @@ individual hardware tests using an ESP32-WROOM-32 development board.
 
 <a id="connection-flow"></a>
 
-## <img src="assets/sections/connection-flow.svg" width="320" height="40" alt="Connection flow">
+<h2>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/sections/connection-flow-dark.svg">
+    <img src="assets/sections/connection-flow-light.svg" width="320" height="40" alt="Connection flow">
+  </picture>
+</h2>
 
+<p align="left">
 <picture>
   <source media="(max-width: 600px)" srcset="assets/connection-flow-mobile.svg">
   <img src="assets/connection-flow.svg" width="100%" alt="Open the setup page, enter and save Wi-Fi details, then the ESP32 joins the selected network.">
 </picture>
+</p>
 
 The ESP32 first tries its saved connection. If it cannot connect, it opens
 its own setup network. I join that network and open `http://192.168.4.1`
@@ -40,7 +48,12 @@ assigned IP address in Serial Monitor at **115200 baud**.
 
 <a id="test-results"></a>
 
-## <img src="assets/sections/test-results.svg" width="320" height="40" alt="Test results">
+<h2>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/sections/test-results-dark.svg">
+    <img src="assets/sections/test-results-light.svg" width="320" height="40" alt="Test results">
+  </picture>
+</h2>
 
 | Test | What I observed |
 | :--- | :--- |
@@ -55,7 +68,12 @@ to be confirmed. `XX` is a temporary placeholder for my assigned number.
 
 <a id="hardware-evidence"></a>
 
-## <img src="assets/sections/hardware-evidence.svg" width="320" height="40" alt="Hardware evidence">
+<h2>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/sections/hardware-evidence-dark.svg">
+    <img src="assets/sections/hardware-evidence-light.svg" width="320" height="40" alt="Hardware evidence">
+  </picture>
+</h2>
 
 ### Setup page on my phone
 
@@ -112,7 +130,12 @@ and upload the sketch.
 
 <a id="what-i-learned"></a>
 
-## <img src="assets/sections/what-i-learned.svg" width="320" height="40" alt="What I learned">
+<h2>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/sections/what-i-learned-dark.svg">
+    <img src="assets/sections/what-i-learned-light.svg" width="320" height="40" alt="What I learned">
+  </picture>
+</h2>
 
 WiFiManager saves the network details I enter through the setup page on
 the ESP32, so I can connect to a different network without changing the code.
